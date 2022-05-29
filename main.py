@@ -4,14 +4,13 @@ if __name__ == "__main__":
 import csv
 
 class MenadzerPolaczen:
-  def __init__(self, nazwa_pliku):
-    self.filename = nazwa_pliku
-    self.data_dict = self.wczytaj_dane()
+  def __init__(self, filename):
+    self.filename = filename
+    self.data_dict = self.read_data()
 
-
-  def wczytaj_dane(self):
+  def read_data(self):
     calls_dict_sum = dict()
-    with open(self.nazwa_pliku, 'r') as fin:
+    with open(self.filename, 'r') as fin:
       reader = csv.reader(fin, delimiter= ",")
       headers = next(reader)
 
