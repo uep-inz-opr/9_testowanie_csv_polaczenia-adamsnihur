@@ -5,7 +5,7 @@ import csv
 
 class MenadzerPolaczen:
   def __init__(self, nazwa_pliku):
-    self.filenaCme = nazwa_pliku
+    self.filename = nazwa_pliku
     self.data_dict = self.wczytaj_dane()
 
 
